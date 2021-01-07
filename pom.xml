@@ -378,8 +378,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <source>1.8</source> <!-- 1/7 버전안맞아서 수정함  1.6에서 1.8로변경 -->
+                    <target>1.8</target><!-- 1/7 버전안맞아서 수정함  1.6에서 1.8로변경 -->
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
