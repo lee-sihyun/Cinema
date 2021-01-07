@@ -1,4 +1,4 @@
-package cinema.movie.test;
+package cinema.movie.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
