@@ -14,7 +14,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="cinema.movie.test">
+	<logger name="cinema.movie.controller">
 		<level value="info" />
 	</logger>
 	
