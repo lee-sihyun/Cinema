@@ -12,7 +12,7 @@ PHONE_NUM           NUMBER(38)
 */  
 public class UserInfoDTO {
 
-	private int userNum;
+
 	private String userId;
 	private String userPw;
 	private String userGrade;
@@ -26,14 +26,7 @@ public class UserInfoDTO {
 	}
 
 
-	public int getUserNum() {
-		return userNum;
-	}
 
-
-	public void setUserNum(int userNum) {
-		this.userNum = userNum;
-	}
 
 
 	public String getUserId() {

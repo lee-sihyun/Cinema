@@ -5,7 +5,7 @@
 <insert id="insertUserInfo">
 
 insert into userinfo values (
-#{userNum},#{userId},#{userPw},#{userGrade},#{addNum},
+#{userId},#{userPw},#{userGrade},#{addNum},
 #addNum},#{phone});
 </insert>
 
