@@ -28,21 +28,7 @@ public class MainController {
     	return "redirect:/login";
     }
     
-    @RequestMapping("test")
-    public String gittest() {
-    	return "";
-    }
-    
-    
-    @RequestMapping("test2")
-    public String gittest2() {
-    	return "";
-    }
-	
-    @RequestMapping("test3")
-    public String gittest3() {
-    	return "";
-    }
+
 	
 	
 	
