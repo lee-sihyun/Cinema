@@ -39,6 +39,11 @@ public class MainController {
     	return "";
     }
 	
+    @RequestMapping("test3")
+    public String gittest3() {
+    	return "";
+    }
+	
 	
 	
 }
