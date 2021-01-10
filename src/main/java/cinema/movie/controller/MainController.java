@@ -34,7 +34,10 @@ public class MainController {
     }
     
     
-    
+    @RequestMapping("test2")
+    public String gittest2() {
+    	return "";
+    }
 	
 	
 	
