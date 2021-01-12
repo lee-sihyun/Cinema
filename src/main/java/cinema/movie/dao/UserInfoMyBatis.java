@@ -1,10 +1,10 @@
-package cinema.movie.dto;
+package cinema.movie.dao;
 
 import org.apache.ibatis.session.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-import cinema.movie.dao.*;
+import cinema.movie.dto.*;
 import cinema.movie.mapper.*;
 
 @Repository

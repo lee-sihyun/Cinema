@@ -1,32 +1,29 @@
 package cinema.movie.dto;
 /*
-이름         널?       유형            
----------- -------- ------------- 
-USER_NUM   NOT NULL NUMBER(38)    
-USER_ID             VARCHAR2(20)  
-USER_PW             VARCHAR2(20)  
-USER_GRADE          VARCHAR2(20)  
-ADD_NUM             NUMBER(38)    
-ADDRESS             VARCHAR2(100) 
-PHONE_NUM           NUMBER(38)  
+
+이름        널?       유형             
+--------- -------- -------------- 
+USER_ID   NOT NULL VARCHAR2(1000) 
+USER_PW   NOT NULL VARCHAR2(1000) 
+ADD_NUM   NOT NULL NUMBER(38)     
+ADDRESS   NOT NULL VARCHAR2(1000) 
+PHONE_NUM NOT NULL NUMBER(38)     
+RE_NUM    NOT NULL NUMBER(38) 
 */  
 public class UserInfoDTO {
 
 
 	private String userId;
 	private String userPw;
-	private String userGrade;
 	private int addNum;
 	private String address;
-	private int phone;
+	private int phoneNum;
+	private int reNum;
 	
 	
 	public UserInfoDTO() {
 		// TODO Auto-generated constructor stub
 	}
-
-
-
 
 
 	public String getUserId() {
@@ -46,16 +43,6 @@ public class UserInfoDTO {
 
 	public void setUserPw(String userPw) {
 		this.userPw = userPw;
-	}
-
-
-	public String getUserGrade() {
-		return userGrade;
-	}
-
-
-	public void setUserGrade(String userGrade) {
-		this.userGrade = userGrade;
 	}
 
 
@@ -79,16 +66,28 @@ public class UserInfoDTO {
 	}
 
 
-	public int getPhone() {
-		return phone;
+	public int getPhoneNum() {
+		return phoneNum;
 	}
 
 
-	public void setPhone(int phone) {
-		this.phone = phone;
+	public void setPhoneNum(int phoneNum) {
+		this.phoneNum = phoneNum;
 	}
-	
-	
+
+
+	public int getReNum() {
+		return reNum;
+	}
+
+
+	public void setReNum(int reNum) {
+		this.reNum = reNum;
+	}
+
+
+
+
 	
 	
 	

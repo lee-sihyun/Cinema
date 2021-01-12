@@ -5,9 +5,10 @@
 <insert id="insertUserInfo">
 
 insert into userinfo values (
-#{userId},#{userPw},#{userGrade},#{addNum},
-#addNum},#{phone});
+#{userId},#{userPw},#{addNum},
+#{address},#{phoneNum},#{reNum});
 </insert>
+
 
 
 </mapper>
