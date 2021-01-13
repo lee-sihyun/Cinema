@@ -15,7 +15,7 @@ public class UserInfoServiceImpl implements UserInfoService{
 	
 	@Override
 	public void insertUserInfo(UserInfoDTO userInfoDTO) {
-		userInfoDTO.setUserPw(userInfoDTO.getUserPw());
+	//	userInfoDTO.setUserPw(userInfoDTO.getUserPw());
 		userInfoDAO.insertUserInfo(userInfoDTO);
 		
 	}

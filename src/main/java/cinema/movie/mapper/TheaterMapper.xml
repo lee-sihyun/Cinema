@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cinema.movie.mapper">
+<!-- THEATER_NUM  NOT NULL NUMBER(38)     
+THEATER_NAME NOT NULL VARCHAR2(1000) 
+ADDRESS      NOT NULL VARCHAR2(1000) 
+THEATER_LIST NOT NULL VARCHAR2(1000 -->
+<insert id="insertTheater">
+
+insert into theater values(#{theaterNum},#{theaterName},#{address},#{theaterList});
+
+</insert>
+
+
+
+</mapper>
