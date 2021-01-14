@@ -1,5 +1,7 @@
 package cinema.movie.service;
 
+import java.util.*;
+
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
@@ -18,6 +20,12 @@ public class UserInfoServiceImpl implements UserInfoService{
 	//	userInfoDTO.setUserPw(userInfoDTO.getUserPw());
 		userInfoDAO.insertUserInfo(userInfoDTO);
 		
+	}
+
+	@Override
+	public List<UserInfoDTO> selectUserInfo(int userNum) {
+		// TODO Auto-generated method stub
+		return  userInfoDAO.selectUserInfo(userNum);
 	}
 	
 	

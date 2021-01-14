@@ -1,5 +1,7 @@
 package cinema.movie.dao;
 
+import java.util.*;
+
 import org.apache.ibatis.session.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
@@ -17,6 +19,12 @@ public class UserInfoMyBatis implements UserInfoDAO {
 	public int insertUserInfo(UserInfoDTO userInfoDTO) {
 		// TODO Auto-generated method stub
 		return sqlsession.getMapper(UserInfoMapper.class).insertUserInfo(userInfoDTO);
+	}
+
+	@Override
+	public List<UserInfoDTO> selectUserInfo(int userNum) {
+		// TODO Auto-generated method stub
+		return sqlsession.getMapper(UserInfoMapper.class).selectUserInfo(userNum);
 	}
 
 }

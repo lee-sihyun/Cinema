@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cinema.movie.mapper"> 
+<mapper namespace="cinema.movie.mapper.PayMapper"> 
 <!-- 
  이름            널?       유형             
 
@@ -13,7 +13,12 @@ RE_NUM        NOT NULL NUMBER(38)
  -->
 
 <insert id="insertPay">
-insert into pay values (#{payNum},#{userId},#{payDate},#{ticketAmount},#{price},#{reNum});
+<selectKey  resultType="int" keyProperty="payNum" order="BEFORE">
+select pay_seq.nextval from dual
+</selectKey>
+
+
+insert into pay values (#{payNum},#{userId},#{payDate},#{ticketAmount},#{price},#{reNum})
 
 </insert>
 

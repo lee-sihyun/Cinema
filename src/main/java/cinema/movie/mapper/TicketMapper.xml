@@ -6,11 +6,11 @@ MV_NAME     NOT NULL VARCHAR2(1000)
 MV_CAST     NOT NULL VARCHAR2(1000) 
 MV_DIRECTOR NOT NULL VARCHAR2(1000) 
 RE_NUM      NOT NULL NUMBER(38)    -->
-<mapper namespace="cinema.movie.mapper">
+<mapper namespace="cinema.movie.mapper.TicketMapper">
 
 
 <insert id="insertTicket">
-insert into ticket values (#{ticketNum},#{payNum},#{mvName},#{mvCast},{mvDirector},#{reNum});
+insert into ticket values (#{ticketNum},#{payNum},#{mvName},#{mvCast},{mvDirector},#{reNum})
 
 
 

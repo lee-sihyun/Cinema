@@ -1,5 +1,7 @@
 package cinema.movie.service;
 
+import java.util.*;
+
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
@@ -17,6 +19,12 @@ public class MovieServiceImpl implements MovieService{
 	public void insertMovie(MovieDTO movieDTO) {
 	movieDAO.insertMovie(movieDTO);
 		
+	}
+
+	@Override
+	public List<MovieDTO> selectMv() {
+		// TODO Auto-generated method stub
+		return movieDAO.selectMv();
 	}
 
 

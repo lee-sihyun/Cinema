@@ -1,5 +1,7 @@
 package cinema.movie.dao;
 
+import java.util.*;
+
 import org.apache.ibatis.session.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
@@ -18,6 +20,12 @@ public class MovieMyBatis implements MovieDAO {
 	public int insertMovie(MovieDTO movieDTO) {
 		// TODO Auto-generated method stub
 		return sqlsseion.getMapper(MovieMapper.class).insertMovie(movieDTO);
+	}
+
+	@Override
+	public List<MovieDTO> selectMv() {
+		// TODO Auto-generated method stub
+		return sqlsseion.getMapper(MovieMapper.class).selectMv();
 	}
 	
 	

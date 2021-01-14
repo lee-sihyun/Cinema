@@ -6,12 +6,12 @@ THEATER_NUM NOT NULL NUMBER(38)
 MV_NAME     NOT NULL VARCHAR2(1000) 
 SEATS       NOT NULL VARCHAR2(1000) 
 S_NUM       NOT NULL NUMBER(38)  -->
-<mapper namespace="cinema.movie.mapper">
+<mapper namespace="cinema.movie.mapper.ScreenMapper">
 
 
 <insert id="insertScreen">
 
-insert into screen values (#{sId},#{theaterNum},#{mvName},#{seats},#{seats},#{sNum});
+insert into screen values (#{sId},#{theaterNum},#{mvName},#{seats},#{seats},#{sNum})
 
 
 </insert>
