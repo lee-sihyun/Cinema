@@ -20,15 +20,15 @@ public class MainController {
 	@Autowired
 	private UserInfoService userInfoService;
 	
-    @RequestMapping(value = "/index",method=RequestMethod.GET)
+    @RequestMapping("/")
     public String main() {
-    	return "main/index";
+    	return "main";
     }
     
     
     @RequestMapping("/login")
     public String login() {
-    	return "";
+    	return "main/login";
     	
     }
    
@@ -36,7 +36,7 @@ public class MainController {
     @RequestMapping("/logout")
     public String logout (HttpSession session) {
     	session.invalidate();
-    	return "redirect:/login";
+    	return "redirect:/";
     }
     
     

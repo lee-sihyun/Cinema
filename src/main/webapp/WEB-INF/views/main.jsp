@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>인덱스</title>
 </head>
 <body>
-
+<p>0115 메인페이지</p>
 </body>
 </html>
