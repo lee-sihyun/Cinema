@@ -422,7 +422,7 @@
 				<h2><img src="https://img.cgv.co.kr/R2014/images/title/h2_cultureplex.png" alt="CULTUREPLEX" /></h2>
 
 				<!-- 서브 메뉴 -->
-				
+				<!-- 헤더고치기  -->
 
 <script type="text/javascript">
     //상단 키워드 광고 (S)
@@ -1467,6 +1467,8 @@
             j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
             '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-NNNFR3');
+    
+    
 </script>
 <!-- End Google Tag Manager -->
 
