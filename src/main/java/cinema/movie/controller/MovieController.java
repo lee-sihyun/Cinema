@@ -20,14 +20,14 @@ public class MovieController {
 	private MovieService movieService;
 	
 	//영화목록
-	@RequestMapping("/list")
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String MovieList (Model model) {
 		List<MovieDTO> selectMv=movieService.selectMv();
 		model.addAttribute("selectMv",selectMv);
 		return"movie/list";
 	}
 	
-	//영화삭제
+	//영화추가
 	@RequestMapping(value="/add",method=RequestMethod.GET)
 	public String MovieAdd() {
 		return "movie/add";

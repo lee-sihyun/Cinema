@@ -13,7 +13,7 @@ import cinema.movie.service.*;
 
 
 @Controller
-@RequestMapping("/main")
+//@RequestMapping("/main")
 public class MainController {
 
 	

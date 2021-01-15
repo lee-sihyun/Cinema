@@ -21,7 +21,7 @@
 	</insert>
 
 	<select id="selectMv" resultType="MovieDTO">
-		select * from movie order by mv_num desc
+		select * from movie
 	</select>
 
 
