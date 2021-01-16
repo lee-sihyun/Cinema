@@ -41,8 +41,10 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	<beans:bean id="loginAuthInterceptor" class="cinema.movie.utill.LoginAuthInterceptor"></beans:bean>
-	<beans:bean id="adminInterceptor" class="cinema.movie.utill.AdminInterceptor"></beans:bean>
+	<beans:bean id="loginAuthInterceptor"
+		class="cinema.movie.utill.LoginAuthInterceptor"></beans:bean>
+	<beans:bean id="adminInterceptor"
+		class="cinema.movie.utill.AdminInterceptor"></beans:bean>
 
 
 
@@ -56,21 +58,8 @@
 		base-package="cinema.movie.service" />
 
 	<!-- -->
-	<!--  <interceptors>
-		<interceptor>
-
-			<mapping path="/main" />
-			<mapping path="/film/*" />
-			
-			
-			<beans:ref bean="loginAuthInterceptor" />
-		</interceptor>
-
-
-	</interceptors>
-
-	-->
-
+	<!-- <interceptors> <interceptor> <mapping path="/main" /> <mapping path="/film/*" 
+		/> <beans:ref bean="loginAuthInterceptor" /> </interceptor> </interceptors> -->
 
 
 </beans:beans>
