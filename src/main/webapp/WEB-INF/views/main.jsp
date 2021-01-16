@@ -147,8 +147,8 @@ li {
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
 						<ul id="gnb_list" style="margin-top: 50px; padding-left: 100px;">
 							<li class="moive" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/film/list">영화</a></li>
-							<li class="booking" style="padding-right: 30px;"><a>예매</a></li>
-							<li class="theater"><a>극장</a></li>
+							<li class="booking" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
+							<li class="theater"><a href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
 
 
 						</ul>
