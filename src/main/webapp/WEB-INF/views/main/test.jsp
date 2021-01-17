@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
- 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
 
-
+<!DOCTYPE html>
 <html>
 <head>
+
+
+
+
+
+
 <meta charset="UTF-8">
 <title>영화관</title>
 
@@ -122,13 +125,11 @@ li {
 	.__web-inspector-hideafter-shortcut__::after {
 	visibility: hidden !important;
 }
-
-#movietr {
-	background: #D4F4FA;
-    color: #000000;
-}
-
 </style>
+
+
+<!-- 모달관련 -->
+
 
 
 </head>
@@ -152,11 +153,7 @@ li {
 
 
 					<h2
-						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
-						
-						<a href="${pageContext.request.contextPath }/">영화관</a>
-						
-						</h2>
+						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">영화관</h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
@@ -189,48 +186,33 @@ li {
 
 		<!--본문시작 -->
 		<div id="content">
-		
-	<!-- <p>영화목록</p> -->	
-<table style="font-size: 13px;
-line-height: 1.2;
-color: #666;
-font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-font-weight: 300;
-align-content: center;
-margin-top: 200px;
-margin-left: 500px;">
-<tr id="movietr" style="border: 1px solid;">
-
-<th id="movieth" style="text-align: center; color: black;" >영화이름</th>
-<th id="movieth" style="text-align: center; color: black;">영화감독</th>
-<th id="movieth" style="text-align: center; color: black;">영화배우</th>
-
-</tr>
-
-<c:forEach var="movie" items="${selectMv }">
-
-<tr>
-<td> ${movie.mvName }</td>
-<td> ${movie.mvDirector }</td>
-<td> ${movie.mvCast }</td>
-
-</tr>
+	
+<button class="btn btn-default" data-target="#layerpop" data-toggle="modal">모달출력버튼</button><br/>
+<div class="modal fade" id="layerpop" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- header -->
+      <div class="modal-header">
+        <!-- 닫기(x) 버튼 -->
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <!-- header title -->
+        <h4 class="modal-title">Header</h4>
+      </div>
+      <!-- body -->
+      <div class="modal-body">
+            Body
+      </div>
+      <!-- Footer -->
+      <div class="modal-footer">
+        Footer
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+      </div>
+    </div>
+  </div>
 
 
-</c:forEach>
 
 
-</table>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		</div>
 		<!-- 본문끝 -->
@@ -240,5 +222,23 @@ margin-left: 500px;">
 
 	</div>
 	<!-- 바디영역끝 -->
+	
+ <script>
+ $(function(){
+	    $("#popbutton").click(function(){
+	        $('div.modal').modal();
+	    })
+	})
+	
+	$(function(){
+    $("#popbutton").click(function(){
+        $('div.modal').modal({
+                      remote : 'layer.html'
+                });
+    })
+})
+
+       </script>
+	
 </body>
 </html>

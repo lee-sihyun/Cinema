@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <title>영화관</title>
 
@@ -120,6 +120,9 @@ li {
 </style>
 
 
+<!-- 모달관련 -->
+
+
 </head>
 <body>
 	<div id="cgvwrap">
@@ -130,8 +133,11 @@ li {
 				<div class="sect-service">
 
 					<ul class="gnb">
-						<li class="login"><a style="padding-right: 30px;">로그인</a></li>
-						<li class="login"><a style="padding-right: 30px;">회원가입</a></li>
+						<li class="login"><a 
+						
+						href="${pageContext.request.contextPath }/login" style="padding-right: 30px;">로그인</a></li>
+						<li class="login"><a style="padding-right: 30px;"
+						href="${pageContext.request.contextPath }/join">회원가입</a></li>
 						<li class="login"><a>마이페이지</a></li>
 
 					</ul>
@@ -141,7 +147,8 @@ li {
 
 
 					<h2
-						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">영화관</h2>
+						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
+						<a href="${pageContext.request.contextPath }/">영화관</a> </h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
@@ -173,7 +180,13 @@ li {
 		<!-- 헤더끝 -->
 
 		<!--본문시작 -->
-		<div id="content"></div>
+		<div id="content">
+	
+
+
+
+		
+		</div>
 		<!-- 본문끝 -->
 
 
@@ -181,5 +194,8 @@ li {
 
 	</div>
 	<!-- 바디영역끝 -->
+	
+
+	
 </body>
 </html>

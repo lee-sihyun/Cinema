@@ -10,38 +10,50 @@ import org.springframework.web.bind.annotation.*;
 import cinema.movie.dto.*;
 import cinema.movie.service.*;
 
-
-
 @Controller
 //@RequestMapping("/main")
 public class MainController {
 
-	
 	@Autowired
 	private UserInfoService userInfoService;
-	
-    @RequestMapping("/")
-    public String main() {
-    	return "main";
-    }
-    
-    
-    @RequestMapping("/login")
-    public String login() {
-    	return "main/login";
-    	
-    }
-   
 
-    @RequestMapping("/logout")
-    public String logout (HttpSession session) {
-    	session.invalidate();
-    	return "redirect:/";
-    }
-    
-    
+	@RequestMapping("/")
+	public String main() {
+		return "main";
+	}
+
+	@RequestMapping("/login")
+	public String login() {
+
+		return "main/login";
+
+	}
+
+	@RequestMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/";
+	}
 
 	
+
+	//회원가입
+	@RequestMapping(value = "/join",method=RequestMethod.GET)
+	public String join() {
+		return "main/join";
+
+	}
+	
+	//회원가입 응답
+	@RequestMapping(value = "/join",method = RequestMethod.POST)
+	@ResponseBody
+	public String join(@ModelAttribute UserInfoDTO userinfo) {
+		userInfoService.insertUserInfo(userinfo);
+		return "success";
+
+	}
 	
 	
+	
+
 }
