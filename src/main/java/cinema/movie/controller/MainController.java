@@ -21,11 +21,21 @@ public class MainController {
 	public String main() {
 		return "main";
 	}
-
-	@RequestMapping("/login")
+	
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
-
 		return "main/login";
+
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String login(@ModelAttribute UserInfoDTO userinfoDTO,HttpSession session) {
+
+		//userInfoService.selectUserInfo(userNum);
+		session.setAttribute("", userInfoService.selectUserInfo(userinfoDTO.getUserNum()));
+		
+		return "redirect:/";
 
 	}
 
@@ -51,6 +61,12 @@ public class MainController {
 		userInfoService.insertUserInfo(userinfo);
 		return "success";
 
+	}
+	
+	//회원가입완료
+	@RequestMapping("/completion")
+	public String joincompletion() {
+		return "main";
 	}
 	
 	

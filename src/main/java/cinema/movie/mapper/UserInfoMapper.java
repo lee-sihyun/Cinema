@@ -7,5 +7,6 @@ import cinema.movie.dto.*;
 
 public interface UserInfoMapper {
 int insertUserInfo (UserInfoDTO userInfoDTO);
-List<UserInfoDTO>selectUserInfo(int userNum);
+UserInfoDTO selectUserInfo(int userNum);
+
 }

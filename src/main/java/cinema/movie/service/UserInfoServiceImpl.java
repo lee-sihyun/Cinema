@@ -23,10 +23,13 @@ public class UserInfoServiceImpl implements UserInfoService{
 	}
 
 	@Override
-	public List<UserInfoDTO> selectUserInfo(int userNum) {
+	public UserInfoDTO selectUserInfo(int userNum) {
 		// TODO Auto-generated method stub
-		return  userInfoDAO.selectUserInfo(userNum);
+		return userInfoDAO.selectUserInfo(userNum);
 	}
+
+
+
 	
 	
 

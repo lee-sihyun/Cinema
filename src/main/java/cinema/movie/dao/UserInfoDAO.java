@@ -8,5 +8,5 @@ public interface UserInfoDAO {
 
 	
 	int insertUserInfo(UserInfoDTO userInfoDTO);
-	List<UserInfoDTO>selectUserInfo(int userNum);
+	UserInfoDTO selectUserInfo(int userNum);
 }

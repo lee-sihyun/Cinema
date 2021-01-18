@@ -18,6 +18,8 @@
 		select * from userinfo where user_num=#{userNum}
 
 	</select>
+	
+	
 
 
 </mapper>

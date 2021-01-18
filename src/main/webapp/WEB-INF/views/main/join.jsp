@@ -60,6 +60,13 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 
 
 	<script>
+	
+	$(document).ready(function() {
+		App.init();
+		EmailCompose.init();
+	});
+	
+	
 		$("#submit").click(function() {
 			var userId = $("#userId").val();
 			var userPw = $("#userPw").val();
@@ -82,8 +89,8 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 				dateType : "text",
 				success : function(text) {
 					if (text == "success") {
-						alert("회원가입이 완료되었습니다")
-						location.herf = "/";
+						alert("회원가입이 완료되었습니다");
+						location.href="completion";
 					}
 				},
 				error : function(req) {
