@@ -8,8 +8,8 @@
 			select userinfo_seq.nextval from dual
 		</selectKey>
 		insert into userinfo values (
-		#{userId},#{userPw},#{addNum},
-		#{address},#{phoneNum},#{userNum})
+		#{userNum},#{userId},#{userPw},#{addNum},
+		#{address},#{phoneNum})
 	</insert>
 
 
