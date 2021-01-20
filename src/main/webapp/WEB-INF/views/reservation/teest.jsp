@@ -190,8 +190,7 @@ li {
 			<div class="steps">
 
 
-				<div class="step step1"
-					style="height: 595px; display: block; text-align: center;">
+				<div class="step step1" style="height: 595px; display: block; text-align:center;">
 
 
 					<!--movie -->
@@ -201,44 +200,10 @@ li {
 
 						<div class="col-head" id="skip_movie_list"></div>
 						<!-- col-body -->
-
-
-
-
-
-
-
-
-
 						<div class="col-body"
-							style="height: 560px; border: 1px solid; margin-top: 100px; display: flex;">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							<!-- 영화선택 -->
+							style="height: 560px; border: 1px solid; margin-top: 100px;">
 							<div class="movie-select"
-								style="border: 1px solid; height: 560px; width: 560px; flex: 1;">
-								
-									<div style="border: 1px solid;">
-									<p>영화선택</p>
-								</div>
-								
-								
-								
+								style="border: 1px solid; height: 560px; width: 560px;">
 								<ul id="movielist">
 
 									<li><a>클래식</a></li>
@@ -250,77 +215,52 @@ li {
 									<div class="slider slider-y" style="height: 50px; top: 0px;"></div>
 
 
+									<!-- theater section -->
+								</div>
+								<div class="theater-select"
+									style="border: 1px solid; height: 560px; width: 560px;">
+
+									<div class="theater-list">
+										<ul>
+											<li class="selected"><a
+												onclick="theaterListClickListener(event);return false;;">
+													<span class="name">서울</span> <span class="count">(27)</span>
+
+											</a>
+
+												<div class="theater-list-nano">
+
+													<ul class="content scroll-y">
+														<li><a href="#"
+															onclick="theaterListClickListener(event);return false;">
+																강남 </a></li>
+
+													</ul>
+
+
+												</div></li>
+
+										</ul>
+									</div>
+
+
+								</div>
+								<!-- theater section끝 -->
+								<!-- time섹션 -->
+								<div class="section section-time">
+
+									<div class="colbody" style="border: 1px solid">
+									
+									<a>시간선택</a>
+									
+									</div>
+
+
 								</div>
 
-
+								<!-- theater섹션끝 -->
 
 							</div>
-							<!-- 영화선택끝  -->
-
-
-
-							<!-- theater section -->
-							<div class="theater-select"
-								style="border: 1px solid; height: 560px; width: 560px; flex: 1;">
-
-								<div style="border: 1px solid;">
-									<p>지역선택</p>
-								</div>
-
-
-
-								<div class="theater-list">
-									<ul>
-										<li class="selected"><a
-											onclick="theaterListClickListener(event);return false;;">
-												<span class="name">서울</span> <span class="count">(27)</span>
-
-										</a>
-
-											<div class="theater-list-nano">
-
-												<ul class="content scroll-y">
-													<li><a href="#"
-														onclick="theaterListClickListener(event);return false;">
-															강남 </a></li>
-
-												</ul>
-
-
-											</div></li>
-
-									</ul>
-								</div>
-
-
-							</div>
-							<!-- theater section끝 -->
-
-
-
-
-							<!-- time섹션 -->
-							<div class="section section-time " style="flex: 1;">
-
-								
-								<div style="border: 1px solid;">
-									<p>시간선택</p>
-								</div>
-								<div>
-
-									<p>시간나열</p>
-
-								</div>
-
-
-							</div>
-
-							<!-- time섹션끝 -->
-
-
-
-
-
 
 							<div></div>
 
