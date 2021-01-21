@@ -3,15 +3,9 @@
 
 
 
-
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
-
-
 
 <meta charset="UTF-8">
 <title>영화관</title>
@@ -128,14 +122,21 @@ li {
 </style>
 
 
-<!-- 모달관련 -->
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="">
-    <meta name="author" content="">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
- <title>로그인</title>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<script type="text/javascript">
+	function login() {
+
+		loginForm.action = "${pageContext.request.contextPath }/login";
+		document.loginForm.submit();
+
+	}
+</script>
+
+
 
 
 </head>
@@ -148,8 +149,11 @@ li {
 				<div class="sect-service">
 
 					<ul class="gnb">
-						<li class="login"><a style="padding-right: 30px;">로그인</a></li>
-						<li class="login"><a style="padding-right: 30px;">회원가입</a></li>
+						<li class="login"><a
+							href="${pageContext.request.contextPath }/login"
+							style="padding-right: 30px;">로그인</a></li>
+						<li class="login"><a style="padding-right: 30px;"
+							href="${pageContext.request.contextPath }/join">회원가입</a></li>
 						<li class="login"><a>마이페이지</a></li>
 
 					</ul>
@@ -159,14 +163,19 @@ li {
 
 
 					<h2
-						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">영화관</h2>
+						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
+						<a href="${pageContext.request.contextPath }/">영화관</a>
+					</h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
 						<ul id="gnb_list" style="margin-top: 50px; padding-left: 100px;">
-							<li class="moive" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/film/list">영화</a></li>
-							<li class="booking" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
-							<li class="theater"><a href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
+							<li class="moive" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/film/list">영화</a></li>
+							<li class="booking" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
+							<li class="theater"><a
+								href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
 
 
 						</ul>
@@ -191,35 +200,41 @@ li {
 		<!-- 헤더끝 -->
 
 		<!--본문시작 -->
-		<div id="content">
-	
-<div class="card align-middle" style="width:20rem; border-radius:20px;">
-		<div class="card-title" style="margin-top:30px;">
-			<h2 class="card-title text-center" style="color:#113366;">로그인 폼</h2>
-		</div>
-		<div class="card-body">
-      <form class="form-signin" method="POST" onSubmit="logincall();return false" id="ip">
-        <h5 class="form-signin-heading">로그인 정보를 입력하세요</h5>
-        <label for="inputEmail" class="sr-only">Your ID</label>
-        <input type="text" id="uid" class="form-control" placeholder="Your ID" required autofocus><BR>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="upw" class="form-control" placeholder="Password" required><br>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> 기억하기
-          </label>
-        </div>
-        <button id="btn-Yes" class="btn btn-lg btn-primary btn-block" type="submit">로 그 인</button>
-      </form>
-      
-		</div>
-	</div>
-
-	<div class="modal">
-	</div>
+		<div id="content"
+			style="display: flex; justify-content: center; align-content: center; margin-top: 250px;">
 
 
-		
+
+			<div class="loginForm"
+				style="left: 50%; border: 1px solid grey; width: 300px; height: 160px;">
+				<form id="loginForm" name="loginForm" method="post"
+					style="margin-left: 50px; margin-top: 50px;">
+
+					<table>
+
+						<tr>
+
+							<td>아이디</td>
+							<td><input type="text" name="userId"
+								placeholder="아이디를 입력하세요"></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><input type="text" name="userPw"
+								placeholder="비밀번호를 입력하세요"></td>
+						</tr>
+
+					</table>
+					<input type="button" value="로그인" onclick="login()"
+						style="margin-top: 20px; margin-left: 80px;">
+
+
+				</form>
+			</div>
+			<!-- 로그인폼끝 -->
+
+
+
 		</div>
 		<!-- 본문끝 -->
 
@@ -228,15 +243,7 @@ li {
 
 	</div>
 	<!-- 바디영역끝 -->
-	
- <script>
-           function submit_value(form) {
-               alert(form.ip.value);
-           }
-           
-       </script>
-	 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+
+
 </body>
 </html>

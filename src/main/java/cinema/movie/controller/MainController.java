@@ -8,7 +8,9 @@ import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 
 import cinema.movie.dto.*;
+import cinema.movie.exception.*;
 import cinema.movie.service.*;
+
 
 @Controller
 //@RequestMapping("/main")
@@ -30,11 +32,14 @@ public class MainController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@ModelAttribute UserInfoDTO userinfoDTO,HttpSession session) {
+	public String login(@ModelAttribute UserInfoDTO userInfoDTO,HttpSession session) 
+			throws LoginAuthFailException{
 
-		//userInfoService.selectUserInfo(userNum);
-		session.setAttribute("", userInfoService.selectUserInfo(userinfoDTO.getUserNum()));
+		//userInfoService.loginAuth(userInfoDTO);
 		
+		session.setAttribute("loginUserInfo", userInfoService.selectUserInfo(userInfoDTO.getUserNum()));
+	
+       
 		return "redirect:/";
 
 	}
@@ -70,6 +75,11 @@ public class MainController {
 	}
 	
 	
-	
+    @ExceptionHandler(LoginAuthFailException.class)
+    public String exceptionHandler(LoginAuthFailException exception, Model model) {
+        model.addAttribute("message", exception.getMessage());
+        model.addAttribute("userNum", exception.getUseNum());
+        return "main/login";
+    }
 
 }
