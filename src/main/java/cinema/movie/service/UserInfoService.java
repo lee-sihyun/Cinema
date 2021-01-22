@@ -9,7 +9,7 @@ import cinema.movie.exception.*;
 public interface UserInfoService {
 	
 void insertUserInfo (UserInfoDTO userInfoDTO);
-UserInfoDTO selectUserInfo(int userNum);
+UserInfoDTO selectUserInfo(String userId);
 
 
 //¿Œ¡ı

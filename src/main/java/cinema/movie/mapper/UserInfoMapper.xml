@@ -15,7 +15,7 @@
 
 	<select id="selectUserInfo" resultType="UserInfoDTO">
 
-		select * from userinfo where user_num=#{userNum}
+		select * from userinfo where user_id=#{userId}
 
 	</select>
 	

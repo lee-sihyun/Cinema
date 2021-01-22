@@ -35,9 +35,9 @@ public class MainController {
 	public String login(@ModelAttribute UserInfoDTO userInfoDTO,HttpSession session) 
 			throws LoginAuthFailException{
 
-		//userInfoService.loginAuth(userInfoDTO);
+		userInfoService.loginAuth(userInfoDTO);
 		
-		session.setAttribute("loginUserInfo", userInfoService.selectUserInfo(userInfoDTO.getUserNum()));
+		session.setAttribute("loginUserInfo", userInfoService.selectUserInfo(userInfoDTO.getUserId()));
 	
        
 		return "redirect:/";
@@ -75,11 +75,12 @@ public class MainController {
 	}
 	
 	
-    @ExceptionHandler(LoginAuthFailException.class)
+   @ExceptionHandler(LoginAuthFailException.class)
     public String exceptionHandler(LoginAuthFailException exception, Model model) {
         model.addAttribute("message", exception.getMessage());
-        model.addAttribute("userNum", exception.getUseNum());
+        model.addAttribute("userId", exception.getUserId());
         return "main/login";
     }
+    
 
 }

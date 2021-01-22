@@ -22,9 +22,9 @@ public class UserInfoMyBatis implements UserInfoDAO {
 	}
 
 	@Override
-	public UserInfoDTO selectUserInfo(int userNum) {
+	public UserInfoDTO selectUserInfo(String userId) {
 		// TODO Auto-generated method stub
-		return sqlsession.getMapper(UserInfoMapper.class).selectUserInfo(userNum);
+		return sqlsession.getMapper(UserInfoMapper.class).selectUserInfo(userId);
 	}
 
 

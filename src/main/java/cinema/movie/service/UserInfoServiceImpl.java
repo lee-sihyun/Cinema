@@ -28,26 +28,26 @@ public class UserInfoServiceImpl implements UserInfoService{
 	}
 
 	@Override
-	public UserInfoDTO selectUserInfo(int userNum) {
+	public UserInfoDTO selectUserInfo(String userId) {
 		// TODO Auto-generated method stub
-		return userInfoDAO.selectUserInfo(userNum);
+		return userInfoDAO.selectUserInfo(userId);
 	}
 
 	@Override
 	public void loginAuth(UserInfoDTO userInfoDTO) throws LoginAuthFailException {
 		// TODO Auto-generated method stub
 		
-		UserInfoDTO authUserinfo=userInfoDAO.selectUserInfo(userInfoDTO.getUserNum());
-        System.out.println("userInfoDTO.getUserNum() = "+userInfoDTO.getUserNum());
+		UserInfoDTO authUserinfo=userInfoDAO.selectUserInfo(userInfoDTO.getUserId());
+        System.out.println("userInfoDTO.getUserId = "+userInfoDTO.getUserId());
         if(authUserinfo==null) {
-            throw new LoginAuthFailException(userInfoDTO.getUserNum(), "회원정보가 존재하지 않습니다.");
+            throw new LoginAuthFailException(userInfoDTO.getUserId(), "회원정보가 존재하지 않습니다.");
         }
         
-        //BCrypt.checkpw(String plantText, String hashed)
-        // => 일반 문자열과 암호화된 문자열을 비교하여 같은 경우 true를 반환하는 메소드
-        if(!BCrypt.checkpw(userInfoDTO.getUserPw(), authUserinfo.getUserPw())) {
-            throw new LoginAuthFailException(userInfoDTO.getUserNum(), "아이디가 없거나 비밀번호가 맞지 않습니다.");
-        }
+      
+     /*  if(!BCrypt.checkpw(userInfoDTO.getUserPw(), authUserinfo.getUserPw())) {
+         throw new LoginAuthFailException(userInfoDTO.getUserId(), "아이디가 없거나 비밀번호가 맞지 않습니다.");
+       }
+       */
 		
 	}
 
