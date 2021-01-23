@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,21 +120,7 @@ li {
 </style>
 
 
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-
-<script type="text/javascript">
-	function login() {
-
-		loginForm.action = "${pageContext.request.contextPath }/login";
-		document.loginForm.submit();
-
-	}
-</script>
-
-
+<!-- 모달관련 -->
 
 
 </head>
@@ -149,12 +133,12 @@ li {
 				<div class="sect-service">
 
 					<ul class="gnb">
-						<li class="login"><a
-							href="${pageContext.request.contextPath }/login"
-							style="padding-right: 30px;">로그인</a></li>
+						<li class="login"><a 
+						
+						href="${pageContext.request.contextPath }/login" style="padding-right: 30px;">로그인</a></li>
 						<li class="login"><a style="padding-right: 30px;"
-							href="${pageContext.request.contextPath }/join">회원가입</a></li>
-					<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
+						href="${pageContext.request.contextPath }/join">회원가입</a></li>
+						<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
 
 					</ul>
 				</div>
@@ -164,18 +148,14 @@ li {
 
 					<h2
 						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
-						<a href="${pageContext.request.contextPath }/">영화관</a>
-					</h2>
+						<a href="${pageContext.request.contextPath }/">영화관</a> </h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
 						<ul id="gnb_list" style="margin-top: 50px; padding-left: 100px;">
-							<li class="moive" style="padding-right: 30px;"><a
-								href="${pageContext.request.contextPath }/film/list">영화</a></li>
-							<li class="booking" style="padding-right: 30px;"><a
-								href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
-							<li class="theater"><a
-								href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
+							<li class="moive" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/film/list">영화</a></li>
+							<li class="booking" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
+							<li class="theater"><a href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
 
 
 						</ul>
@@ -200,41 +180,12 @@ li {
 		<!-- 헤더끝 -->
 
 		<!--본문시작 -->
-		<div id="content"
-			style="display: flex; justify-content: center; align-content: center; margin-top: 250px;">
+		<div id="content">
+	
+<p>마이페이지</p>
 
 
-
-			<div class="loginForm"
-				style="left: 50%; border: 1px solid grey; width: 300px; height: 160px;">
-				<form id="loginForm" name="loginForm" method="post"
-					style="margin-left: 50px; margin-top: 50px;">
-
-					<table>
-
-						<tr>
-
-							<td>아이디</td>
-							<td><input type="text" name="userId"
-								placeholder="아이디를 입력하세요"></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><input type="text" name="userPw"
-								placeholder="비밀번호를 입력하세요"></td>
-						</tr>
-
-					</table>
-					<input type="button" value="로그인" onclick="login()"
-						style="margin-top: 20px; margin-left: 80px;">
-
-
-				</form>
-			</div>
-			<!-- 로그인폼끝 -->
-
-
-
+		
 		</div>
 		<!-- 본문끝 -->
 
@@ -243,7 +194,8 @@ li {
 
 	</div>
 	<!-- 바디영역끝 -->
+	
 
-
+	
 </body>
 </html>

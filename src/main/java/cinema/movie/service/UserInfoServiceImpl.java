@@ -43,8 +43,8 @@ public class UserInfoServiceImpl implements UserInfoService{
             throw new LoginAuthFailException(userInfoDTO.getUserId(), "회원정보가 존재하지 않습니다.");
         }
         
-      
-     /*  if(!BCrypt.checkpw(userInfoDTO.getUserPw(), authUserinfo.getUserPw())) {
+      /*
+       if(!BCrypt.checkpw(userInfoDTO.getUserPw(), authUserinfo.getUserPw())) {
          throw new LoginAuthFailException(userInfoDTO.getUserId(), "아이디가 없거나 비밀번호가 맞지 않습니다.");
        }
        */
