@@ -14,6 +14,7 @@ import cinema.movie.service.*;
 
 
 
+
 @Controller
 //@RequestMapping("/main")
 public class MainController {
@@ -81,16 +82,18 @@ public class MainController {
 	
 	//마이페이지
 		@RequestMapping("/mypage")
-		public String myPage( HttpSession session, Model model, String userId )  {
+		public String myPage( HttpSession session, Model model )  {
 
+		
 			UserInfoDTO loginUserinfo= ((UserInfoDTO)session.getAttribute("loginUserinfo"));
+			
+			String userId = ((UserInfoDTO) session.getAttribute("loginUserinfo")).getUserId();
 			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));
+	/*	public String myPage( @RequestParam String userId, Model model )  {
 			
-			
-			
-			
+			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));
+*/
 			return "main/mypage";
-
 		}
 
 	@ExceptionHandler(LoginAuthFailException.class)

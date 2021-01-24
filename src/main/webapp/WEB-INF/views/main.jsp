@@ -133,12 +133,19 @@ li {
 				<div class="sect-service">
 
 					<ul class="gnb">
-						<li class="login"><a 
-						
-						href="${pageContext.request.contextPath }/login" style="padding-right: 30px;">로그인</a></li>
+						<li class="login"><a
+							href="${pageContext.request.contextPath }/login"
+							style="padding-right: 30px;">로그인</a></li>
+							
+							<li class="login"><a
+							href="${pageContext.request.contextPath }/logout"
+							style="padding-right: 30px;">로그아웃</a></li>
+							
+							
 						<li class="login"><a style="padding-right: 30px;"
-						href="${pageContext.request.contextPath }/join">회원가입</a></li>
-						<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
+							href="${pageContext.request.contextPath }/join">회원가입</a></li>
+						<li class="login"><a
+							href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
 
 					</ul>
 				</div>
@@ -148,14 +155,18 @@ li {
 
 					<h2
 						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
-						<a href="${pageContext.request.contextPath }/">영화관</a> </h2>
+						<a href="${pageContext.request.contextPath }/">영화관</a>
+					</h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
 						<ul id="gnb_list" style="margin-top: 50px; padding-left: 100px;">
-							<li class="moive" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/film/list">영화</a></li>
-							<li class="booking" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
-							<li class="theater"><a href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
+							<li class="moive" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/film/list">영화</a></li>
+							<li class="booking" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
+							<li class="theater"><a
+								href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
 
 
 						</ul>
@@ -180,13 +191,7 @@ li {
 		<!-- 헤더끝 -->
 
 		<!--본문시작 -->
-		<div id="content">
-	
-
-
-
-		
-		</div>
+		<div id="content"></div>
 		<!-- 본문끝 -->
 
 
@@ -194,8 +199,13 @@ li {
 
 	</div>
 	<!-- 바디영역끝 -->
-	
+	<script type="text/javascript">
+		function confirmLogout() {
+			if (confirm("로그아웃 하시겠습니까?")) {
+				location.href = '${pageContext.servletContext.contextPath }/logout';
+			}
+		}
+	</script>
 
-	
 </body>
 </html>

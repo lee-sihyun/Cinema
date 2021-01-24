@@ -152,6 +152,7 @@ li {
 						<li class="login"><a
 							href="${pageContext.request.contextPath }/login"
 							style="padding-right: 30px;">로그인</a></li>
+							
 						<li class="login"><a style="padding-right: 30px;"
 							href="${pageContext.request.contextPath }/join">회원가입</a></li>
 					<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
