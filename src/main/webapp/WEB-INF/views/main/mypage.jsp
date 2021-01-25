@@ -120,7 +120,7 @@ li {
 </style>
 
 
-<!-- 모달관련 -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
@@ -193,7 +193,7 @@ li {
 					
 					<!-- 	<c:forEach var="userInfo" items="${mypage} "> </c:forEach>   -->
 				
-					
+		
 					
 						<tr>
 

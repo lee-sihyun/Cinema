@@ -14,6 +14,12 @@ insert into theater values(#{theaterNum},#{theaterName},#{address},#{theaterList
 
 </insert>
 
+<select id="selectTh" resultType="TheaterDTO">
+
+select * from theater where address=#{address}
+
+</select>
+
 
 
 </mapper>

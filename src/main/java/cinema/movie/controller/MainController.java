@@ -85,7 +85,7 @@ public class MainController {
 		public String myPage( HttpSession session, Model model )  {
 
 		
-			UserInfoDTO loginUserinfo= ((UserInfoDTO)session.getAttribute("loginUserinfo"));
+//			UserInfoDTO loginUserinfo= ((UserInfoDTO)session.getAttribute("loginUserinfo"));
 			
 			String userId = ((UserInfoDTO) session.getAttribute("loginUserinfo")).getUserId();
 			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));

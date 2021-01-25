@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -119,9 +119,7 @@ li {
 }
 </style>
 
-
-<!-- 모달관련 -->
-
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </head>
 <body>
@@ -138,7 +136,8 @@ li {
 							style="padding-right: 30px;">로그인</a></li>
 						<li class="login"><a style="padding-right: 30px;"
 							href="${pageContext.request.contextPath }/join">회원가입</a></li>
-						<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
+						<li class="login"><a
+							href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
 
 					</ul>
 				</div>
@@ -248,43 +247,46 @@ li {
 									<ul
 										style="display: table; margin-left: auto; margin-right: auto;">
 										<li class="selected">
-										
-										
-										
-										<a href="${pageContext.request.contextPath }/theater/view?address=${theater.address}" class="theaterView"> ${theater.address }"> 
-										
-										
-										
-										
-										
-										<span class="name">서울</span>
 
-										</a> <a href="#"><span class="name">경기</span> </a> <a href="#"><span
-												class="name">인천</span> </a> <a href="#"><span class="name">강원</span>
-										</a> <a href="#"><span class="name">대전/충청</span> </a> <a href="#">
-												<span class="name">광주/전라/제주</span>
-										</a> <a href="#"> <span class="name">대구</span>
-										</a> <a href="#"> <span class="name">부산/울산</span>
-										</a>
+												<a
+													href="${pageContext.request.contextPath }/theater/view?address=${theater.address}"
+													class="theaterView"> ${theater.address }"> <span
+													class="name">서울</span>
 
+												</a>
+												<a href="#"><span class="name">경기</span> </a>
+												<a href="#"><span class="name">인천</span> </a>
+												<a href="#"><span class="name">강원</span> </a>
+												<a href="#"><span class="name">대전/충청</span> </a>
+												<a href="#"> <span class="name">광주/전라/제주</span>
+												</a>
+												<a href="#"> <span class="name">대구</span>
+												</a>
+												<a href="#"> <span class="name">부산/울산</span>
+												</a>
 
 
 
-											<div class="theater-list-nano"
-												style="border: 1px solid; width: 1000px; height: 400px; margin-top: 50px;">
 
-												<ul class="content scroll-y">
-													<li><a href="#"> </a></li>
+												<div class="theater-list-nano"
+													style="border: 1px solid; width: 1000px; height: 400px; margin-top: 50px;">
 
-												</ul>
+										<c:forEach var="theater" items="${theaterView}">
+													<ul class="content scroll-y">
+														<li><a href="#"> </a></li>
 
+													</ul>
+													<a>
+													<c:if test="${theater.address=='서울'}">서울</c:if>
+													<c:if test="${theater.address=='경기'}">경기</c:if>
+</a>
 
-											</div></li>
-
+												</div></li>
 									</ul>
 								</div>
 
 
+										</c:forEach>
 							</div>
 							<!-- theater section끝 -->
 
