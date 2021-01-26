@@ -9,6 +9,10 @@
 <title>영화관</title>
 
 <style type="text/css">
+
+ a:link { color: red; text-decoration: none;}
+ a:visited { color: black; text-decoration: none;}
+ a:hover { color: blue; text-decoration: underline;}
 body, input, textarea, select, button, table {
 	font-size: 13px;
 	line-height: 1.2;

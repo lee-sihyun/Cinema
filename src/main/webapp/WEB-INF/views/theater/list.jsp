@@ -117,6 +117,21 @@ li {
 	.__web-inspector-hideafter-shortcut__::after {
 	visibility: hidden !important;
 }
+
+a:link {
+	
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: blue; 
+	text-decoration: underline;
+}
 </style>
 
 
@@ -138,7 +153,8 @@ li {
 							style="padding-right: 30px;">로그인</a></li>
 						<li class="login"><a style="padding-right: 30px;"
 							href="${pageContext.request.contextPath }/join">회원가입</a></li>
-						<li class="login"><a href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
+						<li class="login"><a
+							href="${pageContext.request.contextPath }/mypage">마이페이지</a></li>
 
 					</ul>
 				</div>
@@ -247,25 +263,24 @@ li {
 								<div class="theater-list">
 									<ul
 										style="display: table; margin-left: auto; margin-right: auto;">
-										<li class="selected">
-										
-										
-										
-										<a href="${pageContext.request.contextPath }/theater/view?address=${theater.address}" class="theaterView"> ${theater.address }"> 
-										
-										
-										
-										
-										
-										<span class="name">서울</span>
+										<li class="selected"><a
+											href="${pageContext.servletContext.contextPath }/theater/list/seoul">
 
-										</a> <a href="#"><span class="name">경기</span> </a> <a href="#"><span
-												class="name">인천</span> </a> <a href="#"><span class="name">강원</span>
-										</a> <a href="#"><span class="name">대전/충청</span> </a> <a href="#">
-												<span class="name">광주/전라/제주</span>
-										</a> <a href="#"> <span class="name">대구</span>
-										</a> <a href="#"> <span class="name">부산/울산</span>
-										</a>
+
+
+
+
+												<span class="name">서울</span>
+
+										</a> 
+										<a href="${pageContext.servletContext.contextPath }/theater/list/gyunggi"><span class="name">경기</span> </a> 
+										<a href="${pageContext.servletContext.contextPath }/theater/list/incheon"><span class="name">인천</span> </a> 
+										<a href="${pageContext.servletContext.contextPath }/theater/list/gangwon"><span class="name">강원</span></a>
+										<a href="${pageContext.servletContext.contextPath }/theater/list/chung"><span class="name">대전/충청</span> </a>
+										 <a href="${pageContext.servletContext.contextPath }/theater/list/jeon"><span class="name">광주/전라/제주</span></a>
+										 <a href="${pageContext.servletContext.contextPath }/theater/list/dae"> <span class="name">대구</span></a>
+										 <a href="${pageContext.servletContext.contextPath }/theater/list/buul"> <span class="name">부산/울산</span></a>
+										
 
 
 
