@@ -20,6 +20,9 @@ select * from theater where address=#{address}
 
 </select>
 
+<!-- join -->
+
+
 
 
 </mapper>
