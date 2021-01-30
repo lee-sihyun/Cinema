@@ -20,7 +20,12 @@ select * from theater where address=#{address}
 
 </select>
 
-<!-- join -->
+<!-- join  screen이랑 theater랑 구분 잘해야함-->
+<select id="joinThScreen" resultType="String">
+
+select * from theater t join screen s on t.theater_num=s.theater_num where mv_name=#{mvName}
+
+	</select>
 
 
 
