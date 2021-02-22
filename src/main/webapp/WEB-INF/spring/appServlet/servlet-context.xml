@@ -20,8 +20,8 @@
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-	<!-- 1/8 이미지 매핑오류나서 이거 추가하고 해결함 -->
-	<resources location="/resources/assets/" mapping="/assets/**" />
+	<!-- 2/22 이미지 경로 재설정함 -->
+	<resources location="/resources/img/" mapping="/img/**" />
 
 
 

@@ -199,7 +199,13 @@ li {
 		<!-- 헤더끝 -->
 
 		<!--본문시작 -->
-		<div id="content"></div>
+		<div id="content">
+		
+
+		<img alt="" src="img/mainimg.JPG">
+		
+		
+		</div>
 		<!-- 본문끝 -->
 
 

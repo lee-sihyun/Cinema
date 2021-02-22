@@ -194,32 +194,32 @@ li {
 					style="margin-left: 50px; margin-top: 50px;">
 
 					<table>
-					
-					<!-- 	<c:forEach var="userInfo" items="${mypage} "> </c:forEach>   -->
-				
-		
-					
-						<tr>
 
-							<td>아이디</td>
-							<td>${userinfo.userId }</td>
-						</tr>
-						<tr>
-							<td>우편번호</td>
-							<td>${userinfo.addNum }</td>
-						</tr>
-						
-						<tr>
-							<td>주소</td>
-							<td>${userinfo.address }</td>
-						</tr>
-						<tr>
-							<td>핸드폰번호</td>
-							<td>${userinfo.phoneNum }</td>
-						</tr>
+						<c:forEach var="userInfo" items="${mypage} ">
 
+
+
+							<tr>
+
+								<td>아이디</td>
+								<td>${mypage.userId }</td>
+							</tr>
+							<tr>
+								<td>우편번호</td>
+								<td>${mypage.addNum }</td>
+							</tr>
+
+							<tr>
+								<td>주소</td>
+								<td>${mypage.address }</td>
+							</tr>
+							<tr>
+								<td>핸드폰번호</td>
+								<td>${mypage.phoneNum }</td>
+							</tr>
+
+						</c:forEach>
 					</table>
-					
 
 
 			</div>

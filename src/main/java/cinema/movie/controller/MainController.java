@@ -84,15 +84,11 @@ public class MainController {
 		@RequestMapping("/mypage")
 		public String myPage( HttpSession session, Model model )  {
 
-		
-//			UserInfoDTO loginUserinfo= ((UserInfoDTO)session.getAttribute("loginUserinfo"));
+	
 			
 			String userId = ((UserInfoDTO) session.getAttribute("loginUserinfo")).getUserId();
 			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));
-	/*	public String myPage( @RequestParam String userId, Model model )  {
-			
-			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));
-*/
+
 			return "main/mypage";
 		}
 
