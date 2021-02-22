@@ -227,7 +227,7 @@ li {
 						</tr>
 						<tr>
 							<td>비밀번호</td>
-							<td><input type="text" name="userPw"
+							<td><input type="password" name="userPw"
 								placeholder="비밀번호를 입력하세요"></td>
 						</tr>
 
@@ -237,9 +237,8 @@ li {
 
 
 				</form>
-			</div>
+			</div >
 			<!-- 로그인폼끝 -->
-
 
 
 		</div>

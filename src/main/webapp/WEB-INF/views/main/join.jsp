@@ -225,7 +225,7 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 				</tr>
 				<tr>
 					<td>비밀번호</td>
-					<td><input type="text" id="userPw"></td>
+					<td><input type="password" id="userPw"></td>
 				</tr>
 				<tr>
 					<td>우편번호</td>
