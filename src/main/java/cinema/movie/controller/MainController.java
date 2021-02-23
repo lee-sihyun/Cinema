@@ -23,11 +23,18 @@ public class MainController {
 	private UserInfoService userInfoService;
 
 	@RequestMapping("/")
-	public String main() {
+	public String main(HttpSession session, Model model) {
+		
+		
+        
+       
+	
 		return "main";
+		
+		
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/login", method = RequestMethod.GET) 	
 	public String login() {
 		return "main/login";
 
@@ -47,6 +54,10 @@ public class MainController {
 	            session.removeAttribute("destURI");
 	            return "redirect:"+destURI;
 	        }
+	      
+	      
+	      
+
 
 		return "redirect:/";
 

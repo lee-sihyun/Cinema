@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="UTF-8">
 <title>영화관</title>
+
+
+
 
 <style type="text/css">
 body, input, textarea, select, button, table {
@@ -118,13 +122,20 @@ li {
 	visibility: hidden !important;
 }
 
+a:link {
+	color: red;
+	text-decoration: none;
+}
 
+a:visited {
+	color: black;
+	text-decoration: none;
+}
 
- a:link { color: red; text-decoration: none;}
- a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}
-
-
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
 </style>
 
 
@@ -141,15 +152,55 @@ li {
 				<div class="sect-service">
 
 					<ul class="gnb">
-						<li class="login"><a
-							href="${pageContext.request.contextPath }/login"
-							style="padding-right: 30px;">로그인</a></li>
+
+						<!-- 	<li>${loginUserinfo.userId }님<c:if test="${userId==null}">
+								<li class="login"><a
+									href="${pageContext.request.contextPath }/login"
+									style="padding-right: 30px;">로그인 </a></li>
+
+							</c:if>
+
+
+
+						</li> -->
+
+						<!--  <li><c:choose>
+								<c:when test="${userId eq null}">
+									<li class="login"><a
+										href="${pageContext.request.contextPath }/login"
+										style="padding-right: 30px;">로그인 비회원 </a></li>
+								</c:when>
+
+								<c:when test="${userId ne null}">
+									<li>${loginUserinfo.userId }님</li>
+								</c:when>
+							</c:choose></li>
+-->
+						<!-- <c:set var="userId" value="${userId}" /> -->
+					
+						<li><c:if test="${empty userId}">
+								<a href="${pageContext.request.contextPath }/login"
+									style="padding-right: 30px;">로그인 </a>
+							</c:if>
 							
-							<li class="login"><a
+								${loginUserinfo.userId } 님
+							
+							
+							
+							</li>
+
+
+
+
+
+
+
+
+						<li class="login"><a
 							href="${pageContext.request.contextPath }/logout"
 							style="padding-right: 30px;">로그아웃</a></li>
-							
-							
+
+
 						<li class="login"><a style="padding-right: 30px;"
 							href="${pageContext.request.contextPath }/join">회원가입</a></li>
 						<li class="login"><a
@@ -200,11 +251,11 @@ li {
 
 		<!--본문시작 -->
 		<div id="content">
-		
 
-		<img alt="" src="img/mainimg.JPG">
-		
-		
+
+			<img alt="" src="img/mainimg.JPG">
+
+
 		</div>
 		<!-- 본문끝 -->
 
