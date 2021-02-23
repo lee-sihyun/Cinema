@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
- 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
@@ -14,10 +14,33 @@
 <title>영화관</title>
 
 <style type="text/css">
- a:link { color: red; text-decoration: none;}
- a:visited { color: black; text-decoration: none;}
- a:hover { color: blue; text-decoration: underline;}ration:none } 
+a:link {
+	color: red;
+	text-decoration: none;
+}
 
+a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+ration
+
+
+
+
+:none
+
+
+ 
+
+
+}
 body, input, textarea, select, button, table {
 	font-size: 13px;
 	line-height: 1.2;
@@ -129,9 +152,8 @@ li {
 
 #movietr {
 	background: #D4F4FA;
-    color: #000000;
+	color: #000000;
 }
-
 </style>
 
 
@@ -157,17 +179,20 @@ li {
 
 					<h2
 						style="position: absolute; top: 28px; left: 50%; width: 428px; height: 31px; margin-left: -214px; text-align: center;">
-						
+
 						<a href="${pageContext.request.contextPath }/">영화관</a>
-						
-						</h2>
+
+					</h2>
 
 					<div class="inb" style="width: 376px; margin: 0 auto; clear: both;">
 						<h2 class="__web-inspector-hide-shortcut__">주메뉴</h2>
 						<ul id="gnb_list" style="margin-top: 50px; padding-left: 100px;">
-							<li class="moive" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/film/list">영화</a></li>
-							<li class="booking" style="padding-right: 30px;"><a href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
-							<li class="theater"><a href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
+							<li class="moive" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/film/list">영화</a></li>
+							<li class="booking" style="padding-right: 30px;"><a
+								href="${pageContext.request.contextPath }/reservation/list">예매</a></li>
+							<li class="theater"><a
+								href="${pageContext.request.contextPath }/theater/list"> 극장</a></li>
 
 
 						</ul>
@@ -193,49 +218,46 @@ li {
 
 		<!--본문시작 -->
 		<div id="content">
-		
-	<!-- <p>영화목록</p> -->	
-<table style="font-size: 13px;
-line-height: 1.2;
-color: #666;
-font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-font-weight: 300;
-align-content: center;
-margin-top: 200px;
-margin-left: 500px;">
-<tr id="movietr" style="border: 1px solid;">
 
-<th id="movieth" style="text-align: center; color: black;" >영화이름</th>
-<th id="movieth" style="text-align: center; color: black;">영화감독</th>
-<th id="movieth" style="text-align: center; color: black;">영화배우</th>
+			<!-- <p>영화목록</p> -->
+			<table
+				style="font-size: 13px; line-height: 1.2; color: #666; font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif; font-weight: 300; align-content: center; margin-top: 200px; margin-left: 500px;">
+				<c:forEach var="movie" items="${selectMv} ">
 
-</tr>
+					<tr id="movietr" style="border: 1px solid;">
 
-<c:forEach var="movie" items="${selectMv }">
+						<th id="movieth" style="text-align: center; color: black;">영화이름</th>
+						<th id="movieth" style="text-align: center; color: black;">영화감독</th>
+						<th id="movieth" style="text-align: center; color: black;">영화배우</th>
 
-<tr>
-<td> ${movie.mvName }</td>
-<td> ${movie.mvDirector }</td>
-<td> ${movie.mvCast }</td>
+					</tr>
 
-</tr>
+					<tr>
 
 
-</c:forEach>
+		<td>${selectMv.mvNum }</td>
+		
+		
+
+					</tr>
+					
 
 
-</table>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+		</c:forEach>  	
+
+			</table>
+
+
+
+
+
+
+
+
+
+
+
 		</div>
 		<!-- 본문끝 -->
 

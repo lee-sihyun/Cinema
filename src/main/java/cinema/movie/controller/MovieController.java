@@ -22,8 +22,10 @@ public class MovieController {
 	//영화목록
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String MovieList (Model model) {
-		List<MovieDTO> selectMv=movieService.selectMv();
-		model.addAttribute("selectMv",selectMv);
+		
+		//List<MovieDTO> selectMv=movieService.selectMv();
+		model.addAttribute("selectMv",movieService.selectMv());
+		
 		return"movie/list";
 	}
 	
