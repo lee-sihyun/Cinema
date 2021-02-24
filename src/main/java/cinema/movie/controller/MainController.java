@@ -29,14 +29,14 @@ public class MainController {
         
        
 	
-		return "main";
+		return "main/index";
 		
 		
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET) 	
 	public String login() {
-		return "main/login";
+		return "member/login";
 
 	}
 
@@ -72,7 +72,7 @@ public class MainController {
 	// 회원가입
 	@RequestMapping(value = "/join", method = RequestMethod.GET)
 	public String join() {
-		return "main/join";
+		return "member/join";
 
 	}
 
@@ -88,7 +88,7 @@ public class MainController {
 	// 회원가입완료
 	@RequestMapping("/completion")
 	public String joincompletion() {
-		return "main";
+		return "member/login";
 	}
 	
 	//마이페이지
@@ -100,14 +100,14 @@ public class MainController {
 			String userId = ((UserInfoDTO) session.getAttribute("loginUserinfo")).getUserId();
 			model.addAttribute("mypage", userInfoService.selectUserInfo(userId));
 
-			return "main/mypage";
+			return "member/mypage";
 		}
 
 	@ExceptionHandler(LoginAuthFailException.class)
 	public String exceptionHandler(LoginAuthFailException exception, Model model) {
 		model.addAttribute("message", exception.getMessage());
 		model.addAttribute("userId", exception.getUserId());
-		return "main/login";
+		return "member/login";
 	}
 
 

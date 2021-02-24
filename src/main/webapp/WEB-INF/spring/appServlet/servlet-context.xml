@@ -22,6 +22,9 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<!-- 2/22 이미지 경로 재설정함 -->
 	<resources location="/resources/img/" mapping="/img/**" />
+	
+	<!--  2/24 css 관련 추가-->
+	<resources location="/resources/css/" mapping="/css/**" />
 
 
 
@@ -29,6 +32,36 @@
 		class="org.springframework.web.servlet.view.BeanNameViewResolver">
 		<beans:property name="order" value="1" />
 	</beans:bean>
+
+
+<!-- UrlBasedViewResolver : Spring Framework에서 제공하는 ViewResolver를
+	사용하지 않고 외부에서 제공하는 ViewResolver를 사용할 수 있는 기능을 제공 클래스 -->
+	<beans:bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<!-- viewClass 필드에 TilesView 클래스 경로를 인젝션 -->
+		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
+		<!-- order 필드에 정수값을 인젝션 -->
+		<!-- => ViewResolver의 우선순서를 설정하는 필드 -->
+		<!-- => 전달된 정수값이 낮을수록 우선 순위가 높아 먼저 실행 -->
+		<beans:property name="order" value="2"/>	
+	</beans:bean>		
+	
+	<!-- TilesConfigurer : Tiles에서 사용할 뷰페이지 정보를 제공하는 XML 파일을 저장하는 클래스 -->
+	<beans:bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<!-- definitions 필드(List)에 XML 파일들을 인젝션 처리 -->
+		<beans:property name="definitions">
+			<beans:list>
+				<beans:value>/WEB-INF/spring/appServlet/tiles.xml</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
+
+
+
+
+
+
+
+
 
 
 
