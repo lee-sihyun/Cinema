@@ -22,6 +22,9 @@ public class LoginAuthFailException extends Exception{
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
+	
+
+
     
     
 

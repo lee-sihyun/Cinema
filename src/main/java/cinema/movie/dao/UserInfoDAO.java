@@ -9,4 +9,7 @@ public interface UserInfoDAO {
 	
 	int insertUserInfo(UserInfoDTO userInfoDTO);
 	UserInfoDTO selectUserInfo(String userId);
+	
+	
+	int idChk(UserInfoDTO userInfoDTO);
 }

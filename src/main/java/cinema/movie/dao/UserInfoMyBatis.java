@@ -27,6 +27,12 @@ public class UserInfoMyBatis implements UserInfoDAO {
 		return sqlsession.getMapper(UserInfoMapper.class).selectUserInfo(userId);
 	}
 
+	@Override
+	public int idChk(UserInfoDTO userInfoDTO) {
+		// TODO Auto-generated method stub
+		return sqlsession.getMapper(UserInfoMapper.class).idChk(userInfoDTO);
+	}
+
 
 
 }
