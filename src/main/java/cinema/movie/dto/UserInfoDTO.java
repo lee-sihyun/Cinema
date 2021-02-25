@@ -30,9 +30,13 @@ public class UserInfoDTO {
 	}
 
 
+
+
 	public String getUserId() {
 		return userId;
 	}
+
+
 
 
 	public void setUserId(String userId) {
@@ -40,9 +44,13 @@ public class UserInfoDTO {
 	}
 
 
+
+
 	public String getUserPw() {
 		return userPw;
 	}
+
+
 
 
 	public void setUserPw(String userPw) {
@@ -50,9 +58,13 @@ public class UserInfoDTO {
 	}
 
 
+
+
 	public int getAddNum() {
 		return addNum;
 	}
+
+
 
 
 	public void setAddNum(int addNum) {
@@ -60,9 +72,13 @@ public class UserInfoDTO {
 	}
 
 
+
+
 	public String getAddress() {
 		return address;
 	}
+
+
 
 
 	public void setAddress(String address) {
@@ -70,9 +86,13 @@ public class UserInfoDTO {
 	}
 
 
+
+
 	public int getPhoneNum() {
 		return phoneNum;
 	}
+
+
 
 
 	public void setPhoneNum(int phoneNum) {
@@ -82,10 +102,11 @@ public class UserInfoDTO {
 
 
 
-
 	public int getUserNum() {
 		return userNum;
 	}
+
+
 
 
 	public void setUserNum(int userNum) {
@@ -93,7 +114,6 @@ public class UserInfoDTO {
 	}
 
 
-	
 	
 	
 }

@@ -128,7 +128,13 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 			var addNum = $("#addNum").val();
 			var address = $("#address").val();
 			var phoneNum = $("#phoneNum").val();
-
+			
+			
+	
+			
+			
+			
+			
 			$.ajax({
 
 				type : "POST",
@@ -148,6 +154,9 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 						location.href = "completion";
 					}
 				},
+			
+				
+				
 				error : function(req) {
 					alert("응답 에러 코드 =" + req.status);
 				}

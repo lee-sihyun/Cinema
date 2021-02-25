@@ -17,7 +17,7 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		HttpSession session=request.getSession();
-		//UserInfoDTO userId = (UserInfoDTO)session.getAttribute("loginUserinfo");
+	UserInfoDTO user = (UserInfoDTO)session.getAttribute("loginUserinfo");
 		
 		if(session.getAttribute("loginUserinfo")==null) {
 			String uri=request.getRequestURI().substring(request.getContextPath().length());
