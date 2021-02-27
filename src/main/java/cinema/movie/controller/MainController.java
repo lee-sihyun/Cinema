@@ -85,13 +85,13 @@ public class MainController {
 		 * "/member/join"; } else { userInfoService.insertUserInfo(userinfo); }
 		 */
 
-		if (userinfo.getUserId() != null) {
+	/*	if (userinfo.getUserId() != null) {
 
 				System.out.println("이미존재하는아이디");
 				
-			return "/";
+			//return "redirect:member/join";
 		}
-
+*/
 		userInfoService.insertUserInfo(userinfo);
 		return "success";
 

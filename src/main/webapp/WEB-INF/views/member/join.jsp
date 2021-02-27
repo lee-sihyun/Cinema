@@ -121,6 +121,10 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 			App.init();
 			EmailCompose.init();
 		});
+		
+		
+		
+		var getUserId= userInfoDTO.getUserId.val();
 
 		$("#submit").click(function() {
 			var userId = $("#userId").val();
@@ -131,6 +135,7 @@ USER_NUM  NOT NULL NUMBER(38)      -->
 			
 			
 	
+
 			
 			
 			

@@ -1,27 +1,19 @@
 package cinema.movie.dto;
-/*이름           널?       유형             
+/*
+이름           널?       유형             
 ------------ -------- -------------- 
 THEATER_NUM  NOT NULL NUMBER(38)     
-THEATER_NAME NOT NULL VARCHAR2(1000) 
-ADDRESS      NOT NULL VARCHAR2(1000) 
-THEATER_LIST NOT NULL VARCHAR2(1000) */
+THEATER_NAME          VARCHAR2(1000) 
+ADDRESS               VARCHAR2(1000) 
+ */
 public class TheaterDTO {
 
 	
 	private int theaterNum;
 	private String theaterName;
 	private String address;
-	private String theaterList;
-	
-	
-	public String getTheaterList() {
-		return theaterList;
-	}
 
-
-	public void setTheaterList(String theaterList) {
-		this.theaterList = theaterList;
-	}
+	
 
 
 	public TheaterDTO() {
