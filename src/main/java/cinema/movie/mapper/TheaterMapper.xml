@@ -10,7 +10,7 @@ THEATER_LIST NOT NULL VARCHAR2(1000 -->
 <selectKey resultType="int" keyProperty="theaterNum" order="BEFORE">
 select theater_seq.nextval from dual
 </selectKey>
-insert into theater values(#{theaterNum},#{theaterName},#{address},#{theaterList})
+insert into theater values(#{theaterNum},#{theaterName},#{address}})
 
 </insert>
 
