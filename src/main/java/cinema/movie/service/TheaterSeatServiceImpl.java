@@ -12,11 +12,11 @@ public class TheaterSeatServiceImpl implements TheaterSeatService{
 	
 	
 	@Autowired
-	private TheaterSeatDAO  theaterSeatDAO;
+	private SeatDAO  theaterSeatDAO;
 
 	@Override
-	public void insertTs(TheaterSeatDTO theaterSeatDTO) {
-		theaterSeatDAO.insertTs(theaterSeatDTO);
+	public void insertTs(SeatDTO seatDTO) {
+		theaterSeatDAO.insertSeat(seatDTO);
 		
 	}
 	

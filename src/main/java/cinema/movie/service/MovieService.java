@@ -6,6 +6,6 @@ import cinema.movie.dto.*;
 
 public interface MovieService {
 
-	void insertMovie(MovieDTO movieDTO);
+
 	List<MovieDTO>selectMv();
 }

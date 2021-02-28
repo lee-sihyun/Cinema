@@ -17,12 +17,6 @@ public class MovieMyBatis implements MovieDAO {
 	private SqlSession sqlsseion;
 
 	@Override
-	public int insertMovie(MovieDTO movieDTO) {
-		// TODO Auto-generated method stub
-		return sqlsseion.getMapper(MovieMapper.class).insertMovie(movieDTO);
-	}
-
-	@Override
 	public List<MovieDTO> selectMv() {
 		// TODO Auto-generated method stub
 		return sqlsseion.getMapper(MovieMapper.class).selectMv();
