@@ -6,6 +6,6 @@ import cinema.movie.dto.*;
 
 public interface MovieMapper {
 
-	int insertMovie (MovieDTO movieDTO);
+	
 	List<MovieDTO>selectMv();
 }

@@ -15,11 +15,7 @@ public class MovieServiceImpl implements MovieService{
 	@Autowired
 	private MovieDAO movieDAO;
 
-	@Override
-	public void insertMovie(MovieDTO movieDTO) {
-	movieDAO.insertMovie(movieDTO);
-		
-	}
+
 
 	@Override
 	public List<MovieDTO> selectMv() {

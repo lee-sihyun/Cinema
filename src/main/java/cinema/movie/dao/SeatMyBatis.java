@@ -8,16 +8,16 @@ import cinema.movie.dto.*;
 import cinema.movie.mapper.*;
 
 @Repository
-public class TheaterSeatMyBatis implements TheaterSeatDAO {
+public class SeatMyBatis implements SeatDAO {
 
 	
 	@Autowired
 	private SqlSession sqlSession;
 
 	@Override
-	public int insertTs(TheaterSeatDTO theaterSeatDTO) {
+	public int insertSeat(SeatDTO seatDTO) {
 		// TODO Auto-generated method stub
-		return sqlSession.getMapper(TheaterSeatMapper.class).insertTs(theaterSeatDTO);
+		return sqlSession.getMapper(SeatMapper.class).insertSeat(seatDTO);
 	}
 	
 	

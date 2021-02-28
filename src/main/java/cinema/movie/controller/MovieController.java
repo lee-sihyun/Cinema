@@ -29,12 +29,7 @@ public class MovieController {
 		return"movie/list";
 	}
 	
-	//영화추가
-	@RequestMapping(value="/add",method=RequestMethod.GET)
-	public String MovieAdd() {
-		return "movie/add";
-	}
-	
+
 	
 	
 	

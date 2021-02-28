@@ -1,21 +1,22 @@
 package cinema.movie.dto;
-/*
-이름          널?       유형             
+/*   
+    이름          널?       유형             
 ----------- -------- -------------- 
 MV_NUM      NOT NULL NUMBER(38)     
-MV_NAME     NOT NULL VARCHAR2(1000) 
-MV_DIRECTOR NOT NULL VARCHAR2(1000) 
-MV_CAST     NOT NULL VARCHAR2(1000) 
-THEATER_NUM NOT NULL NUMBER(38)     
+SC_NUM               NUMBER(38)     
+MV_NAME              VARCHAR2(1000) 
+MV_DIRECTOR          VARCHAR2(1000) 
+MV_CAST              VARCHAR2(1000) 
+
 
 */
 public class MovieDTO {
 
 	private int mvNum;
+	private int scNum;
 	private String mvName;
 	private String mvDirector;
 	private String mvCast;
-	private int theaterNum;
 	
 	public MovieDTO() {
 		// TODO Auto-generated constructor stub
@@ -27,6 +28,14 @@ public class MovieDTO {
 
 	public void setMvNum(int mvNum) {
 		this.mvNum = mvNum;
+	}
+
+	public int getScNum() {
+		return scNum;
+	}
+
+	public void setScNum(int scNum) {
+		this.scNum = scNum;
 	}
 
 	public String getMvName() {
@@ -53,18 +62,7 @@ public class MovieDTO {
 		this.mvCast = mvCast;
 	}
 
-	public int getTheaterNum() {
-		return theaterNum;
-	}
 
-	public void setTheaterNum(int theaterNum) {
-		this.theaterNum = theaterNum;
-	}
-
-	
-	
-	
-	
 	
 	
 }

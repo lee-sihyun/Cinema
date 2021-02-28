@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cinema.movie.mapper.TheaterSeatMapper">
+	<!-- 이름 널? 유형 SEAT_NUM NOT NULL NUMBER(38) SC_NUM NUMBER(38) SEATS NUMBER -->
+	<insert id="insertSeat">
+
+		<selectKey resultType="int" keyProperty="scNum"
+			order="BEFORE">
+			select sc_num from screen
+		</selectKey>
+		insert into seat values (#{seatNum},#{scNum},#{seats});
+	</insert>
+
+
+
+
+
+
+</mapper>
