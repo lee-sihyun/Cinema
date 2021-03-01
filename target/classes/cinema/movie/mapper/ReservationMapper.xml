@@ -2,18 +2,27 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cineman.movie.mapper.ReservationMapper">
 
-<!-- RE_NUM        NOT NULL NUMBER(38)     
-USER_ID       NOT NULL VARCHAR2(1000) 
-MV_NAME       NOT NULL VARCHAR2(1000) 
-TICKET_AMOUNT NOT NULL NUMBER(38)     
-SEAT          NOT NULL NUMBER(38)     
-RE_DATE       NOT NULL DATE           
-RE_TIME       NOT NULL VARCHAR2(20)   
-PAY           NOT NULL VARCHAR2(20)   
-MV_NUM        NOT NULL NUMBER(38)      -->
+<!-- 이름            널?       유형             
+
+RE_NUM        NOT NULL NUMBER(38)     
+MV_NUM                 NUMBER(38)     
+USER_ID                VARCHAR2(1000) 
+MV_NAME                VARCHAR2(1000) 
+TICKET_AMOUNT          NUMBER(38)     
+SEAT                   NUMBER(38)     
+RE_DATE                DATE           
+RE_TIME                VARCHAR2(1000) 
+PAY                    VARCHAR2(1000) //결제여부
+PRICE                  NUMBER         //가격
+MV_DIRECTOR            VARCHAR2(1000) 
+MV_CAST                VARCHAR2(1000)  
+       -->
 <insert id="insertReservation">
 <selectKey resultType="int" keyProperty="reNum" order="BEFORE">
 	select reservation_seq.nextval from dual
+</selectKey>
+<selectKey>
+
 </selectKey>
 insert into reservation values (#{reNum},#{userId},#{mvName},#{ticketAmount},#{seat},#{reDate},#{reTime},#{pay},#{mvNum})
 
