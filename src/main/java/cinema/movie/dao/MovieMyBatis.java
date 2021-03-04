@@ -21,6 +21,14 @@ public class MovieMyBatis implements MovieDAO {
 		// TODO Auto-generated method stub
 		return sqlsseion.getMapper(MovieMapper.class).selectMv();
 	}
+
+
+
+	@Override
+	public List<MovieDTO> reSelectMv() {
+		// TODO Auto-generated method stub
+		return sqlsseion.getMapper(MovieMapper.class).reSelectMv();
+	}
 	
 	
 	

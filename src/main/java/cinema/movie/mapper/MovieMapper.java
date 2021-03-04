@@ -8,4 +8,5 @@ public interface MovieMapper {
 
 	
 	List<MovieDTO>selectMv();
+	List<MovieDTO>reSelectMv();
 }

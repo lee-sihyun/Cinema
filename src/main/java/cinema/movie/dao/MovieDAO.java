@@ -6,5 +6,8 @@ import cinema.movie.dto.*;
 
 public interface MovieDAO {
 
+	
 	List<MovieDTO>selectMv();
+	List<MovieDTO>reSelectMv();
+	
 }

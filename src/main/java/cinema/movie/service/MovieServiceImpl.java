@@ -25,6 +25,14 @@ public class MovieServiceImpl implements MovieService{
 
 
 
+	@Override
+	public List<MovieDTO> reSelectMv() {
+		// TODO Auto-generated method stub
+		return movieDAO.reSelectMv();
+	}
+
+
+
 
 	
 	
