@@ -8,4 +8,5 @@ public interface MovieService {
 
 
 	List<MovieDTO>selectMv();
+	List<MovieDTO>reSelectMv();
 }

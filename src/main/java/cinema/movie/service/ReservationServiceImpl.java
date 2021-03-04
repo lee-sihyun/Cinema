@@ -1,5 +1,7 @@
 package cinema.movie.service;
 
+import java.util.*;
+
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
@@ -17,6 +19,12 @@ public class ReservationServiceImpl implements ReservationService{
 	public void insertReservation(ReservationDTO reservationDTO) {
 		
 		reservationDAO.insertReservation(reservationDTO);
+	}
+
+	@Override
+	public List<MovieDTO> reSelectMv() {
+		// TODO Auto-generated method stub
+		return reservationDAO.reSelectMv();
 	}
 	
 	

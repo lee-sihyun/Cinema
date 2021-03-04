@@ -3,11 +3,17 @@
 <mapper namespace="cinema.movie.mapper.MovieMapper">
 
 
+
+ 
 	<select id="selectMv" resultType="MovieDTO">
-		select * from movie order by mv_num desc
-	</select>
+		select DISTINCT mv_name, mv_cast,mv_director,mv_num from movie order by mv_num desc
+	</select> 
 
 
+
+	<select id="reSelectMv" resultType="MovieDTO">
+		select DISTINCT mv_name from movie
+	</select> 
 
 
 
