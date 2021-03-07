@@ -64,7 +64,9 @@
 					<tr>
 
 
-						<td><a href="reservation/add">${movie.mvName }</a></td>
+						<td><a href="./add">${movie.mvName }
+						<input type="hidden" value="${movie.theaterNum} ">
+						</a></td>
 			
 
 
@@ -112,10 +114,7 @@
 									<p>지역선택</p>
 								</div>
 
-
-
-								<div class="theater-list">
-									<ul>
+<!--				<ul>
 										<li class="selected"><a
 											onclick="theaterListClickListener(event);return false;">
 												<span class="name">서울</span> <span class="count">(27)</span>
@@ -134,7 +133,10 @@
 
 											</div></li>
 
-									</ul>
+									</ul>  -->
+
+								<div class="theater-list">
+					
 								</div>
 
 

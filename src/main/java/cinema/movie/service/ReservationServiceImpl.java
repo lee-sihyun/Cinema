@@ -26,6 +26,18 @@ public class ReservationServiceImpl implements ReservationService{
 		// TODO Auto-generated method stub
 		return reservationDAO.reSelectMv();
 	}
+
+	@Override
+	public List<MovieDTO> selectAddress() {
+		// TODO Auto-generated method stub
+		return reservationDAO.selectAddress();
+	}
+
+	@Override
+	public List<MovieDTO> selectAddress2() {
+		// TODO Auto-generated method stub
+	return reservationDAO.selectAddress2();
+	}
 	
 	
 	

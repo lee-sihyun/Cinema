@@ -31,10 +31,21 @@ insert into reservation values (#{reNum},#{userId},#{mvName},#{ticketAmount},#{s
 </insert> -->
 
 
+<!-- select theater_name,address from movie m  join theater t on    t.theater_num = m.theater_num; -->
+
+<!-- 1. 영화이름 선택 후 theaternum을 받아 지역별 영화관 표시 -->
+<select id="selectAddress" resultType="TheaterDTO">
+
+select theater_name,address from theater t join movie m on t.theater_num = m.theater_num where m.theater_num=#{theaterNum}
+
+</select>
 
 
+<!-- 2. -->
+<select id="selectAddress2" resultType="MovieDTO">
 
-
+select address from movie  where theater_num=#{theaterNum}
+</select>
 
 
 </mapper>

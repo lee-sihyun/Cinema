@@ -8,4 +8,9 @@ public interface ReservationService {
 
 	void insertReservation(ReservationDTO reservation);
 	List<MovieDTO>reSelectMv();
+	List<MovieDTO>selectAddress();
+
+	List<MovieDTO>selectAddress2();
 }
+
+

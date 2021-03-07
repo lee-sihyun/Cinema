@@ -7,6 +7,7 @@ SC_NUM               NUMBER(38)
 MV_NAME              VARCHAR2(1000) 
 MV_DIRECTOR          VARCHAR2(1000) 
 MV_CAST              VARCHAR2(1000) 
+THEATER_NUM          NUMBER         
 
 
 */
@@ -17,6 +18,7 @@ public class MovieDTO {
 	private String mvName;
 	private String mvDirector;
 	private String mvCast;
+	private int theaterNum;
 	
 	public MovieDTO() {
 		// TODO Auto-generated constructor stub
@@ -60,6 +62,14 @@ public class MovieDTO {
 
 	public void setMvCast(String mvCast) {
 		this.mvCast = mvCast;
+	}
+
+	public int getTheaterNum() {
+		return theaterNum;
+	}
+
+	public void setTheaterNum(int theaterNum) {
+		this.theaterNum = theaterNum;
 	}
 
 

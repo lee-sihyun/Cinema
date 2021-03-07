@@ -15,13 +15,9 @@ public class ReservationController {
 
 
 
-	
-	/*	@RequestMapping("list")
-	public String ReList() {
-		return "reservation/list";
-	}*/
 
-	
+
+
 	
 	@Autowired MovieService movieService;
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -34,13 +30,33 @@ public class ReservationController {
 	}
 	
 	
+	
 	@Autowired
 	private ReservationService reservationService;
 	
+	@RequestMapping(value = "/add",method = RequestMethod.GET)
+	public String ReAdd(Model model) {
 	
-	@RequestMapping("add")
-	public String ReAdd() {
+		model.addAttribute("selectAddress", reservationService.selectAddress());
+		
 		return "reservation/add";
 	}
+
+	
+	
+	
+	
+	
+	
+	@RequestMapping(value = "/add2",method = RequestMethod.GET)
+	public String ReAdd2(Model model) {
+	
+		model.addAttribute("selectAddress2", reservationService.selectAddress2());
+		
+		return "";
+	}
+
+	
+	
 	
 }
