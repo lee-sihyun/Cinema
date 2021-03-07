@@ -11,6 +11,12 @@ public interface ReservationDAO {
 	List<MovieDTO>reSelectMv();
 	
 	
+	List<MovieDTO>selectAddress();
+	
+	
+	List<MovieDTO>selectAddress2();
+	
+	
 	
 	
 }

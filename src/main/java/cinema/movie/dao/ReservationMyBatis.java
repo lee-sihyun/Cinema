@@ -28,6 +28,19 @@ public class ReservationMyBatis implements ReservationDAO {
 		return sqlSession.getMapper(ReservationMapper.class).reSelectMv();
 	}
 	
+	
+	@Override
+	public List<MovieDTO> selectAddress() {
+		// TODO Auto-generated method stub
+		return sqlSession.getMapper(ReservationMapper.class).selectAddress();
+	}
+
+	@Override
+	public List<MovieDTO> selectAddress2() {
+		// TODO Auto-generated method stub
+		return sqlSession.getMapper(ReservationMapper.class).selectAddress2();
+	}
+	
 
 	
 	

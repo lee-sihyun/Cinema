@@ -10,6 +10,11 @@ public interface ReservationMapper {
 	
 	/*영화목록출력-이름만가져오도록*/
 	List<MovieDTO>reSelectMv();
+	List<MovieDTO>selectAddress();
+	
+	List<MovieDTO>selectAddress2();
+	
+	
 	
 	
 }
